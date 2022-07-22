@@ -119,7 +119,7 @@ export const About = ({
 
         <div>
           <p className="ml-5 mb-2 text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Hello, I'm a <br className="block md:hidden" />
+            Hello, I&apos;m a <br className="block md:hidden" />
             <span className="relative">
               <span className="text-brand-accent h-20 overflow-x-hidden whitespace-nowrap pt-2">
                 {subtitle}
@@ -194,7 +194,9 @@ export const About = ({
           </h3>
           <ul className="list-none space-y-1">
             {educationItems.header.map((each) => (
-              <li className={each.className}>{each.value}</li>
+              <li key={each.value} className={each.className}>
+                {each.value}
+              </li>
             ))}
           </ul>
         </div>
@@ -202,6 +204,7 @@ export const About = ({
           <ul className="mt-11">
             {educationItems.detail.map((each) => (
               <li
+                key={each.value}
                 className={
                   each.className +
                   " transition duration-200 hover:-translate-y-0.5"
@@ -219,7 +222,7 @@ export const About = ({
         </h3>
         <ul className="h-80 list-none space-y-1 overflow-y-auto">
           {certifateItemsOne.map(({ title, logo, company, date, links }) => (
-            <li>
+            <li key={title}>
               <CertificateSection
                 key={title}
                 title={title}

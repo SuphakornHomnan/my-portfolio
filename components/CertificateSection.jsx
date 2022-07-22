@@ -13,7 +13,7 @@ export const CertificateSection = ({ title, logo, company, date, links }) => {
       </div>
       <div className="ml-2">
         <div className="trasition font-medium text-zinc-50 duration-200 hover:-translate-y-0.5 hover:text-[#3EC2EC]">
-          <a href={links} target="_blank">
+          <a href={links} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </div>
