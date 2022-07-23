@@ -65,40 +65,40 @@ export const About = ({
     header: [
       {
         className:
-          "text-zinc-400 transition duration-200 hover:text-zinc-300 hover:translate-x-1",
+          "text-sm text-zinc-400 transition duration-200 hover:text-zinc-300 hover:translate-x-1",
         value: "Chaing Mai University",
       },
       {
         className:
-          "text-sm text-zinc-500 transition duration-200 hover:text-zinc-400 hover:translate-x-1",
+          "text-xs text-zinc-500 transition duration-200 hover:text-zinc-400 hover:translate-x-1",
         value: "Bachelor of Engineering (Computer Engineering)",
       },
       {
         className:
-          "text-zinc-400 transition duration-200 hover:text-zinc-300 hover:translate-x-1",
+          "text-sm text-zinc-400 transition duration-200 hover:text-zinc-300 hover:translate-x-1",
         value: "Assumption College Lampang",
       },
       {
         className:
-          "text-sm text-zinc-500 transition duration-200 hover:text-zinc-400 hover:translate-x-1",
+          "text-xs text-zinc-500 transition duration-200 hover:text-zinc-400 hover:translate-x-1",
         value: "Math-Science room",
       },
     ],
     detail: [
       {
-        className: "text-xs text-zinc-400 text-[#FFA65C]",
+        className: "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
         value: "GPA 2.98",
       },
       {
-        className: "mt-2 text-xs text-zinc-400 text-[#FFA65C]",
+        className: "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
         value: "2017-2021",
       },
       {
-        className: "mt-2 text-xs text-zinc-400 text-[#FFA65C]",
+        className: "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
         value: "GPA 3.38",
       },
       {
-        className: "mt-2 text-xs text-zinc-400 text-[#FFA65C]",
+        className: "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
         value: "2015-2017",
       },
     ],
@@ -107,7 +107,7 @@ export const About = ({
   return (
     <section className="bg-zinc-800 p-10 lg:p-20">
       <header className="flex w-full flex-wrap">
-        <div className="mr 8 relative mb-8 h-32 w-32 transition duration-200 ease-in hover:scale-110">
+        <div className="mr 8 relative mb-8 h-52 w-full transition duration-200 ease-in hover:scale-110 sm:h-32 sm:w-32">
           <Image
             src={profile}
             alt={profileAlt}
@@ -118,7 +118,7 @@ export const About = ({
         </div>
 
         <div>
-          <p className="ml-5 mb-2 text-sm font-semibold uppercase tracking-wider text-zinc-400">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-zinc-400 md:ml-3 lg:ml-3">
             Hello, I&apos;m a <br className="block md:hidden" />
             <span className="relative">
               <span className="text-brand-accent h-20 overflow-x-hidden whitespace-nowrap pt-2">
@@ -127,7 +127,7 @@ export const About = ({
               <span className="{`${styles.cursor} will-change-transform`} absolute -bottom-0 left-0 -top-1 inline-block w-full animate-type bg-zinc-800"></span>
             </span>
           </p>
-          <h1 className="ml-5 flex font-serif text-4xl text-zinc-50 lg:text-6xl">
+          <h1 className="ml-0 mb-2 flex font-serif text-3xl text-zinc-50 md:ml-3 lg:ml-3 lg:text-6xl">
             {title} <span className="animate-waving-hand">👋🏻</span>
           </h1>
         </div>
@@ -192,28 +192,28 @@ export const About = ({
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-50 transition duration-200 hover:-translate-y-1">
             Education
           </h3>
-          <ul className="list-none space-y-1">
-            {educationItems.header.map((each) => (
-              <li key={each.value} className={each.className}>
-                {each.value}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="col-span-7 flex max-w-xl flex-col lg:col-span-2">
-          <ul className="mt-11">
-            {educationItems.detail.map((each) => (
-              <li
-                key={each.value}
-                className={
-                  each.className +
-                  " transition duration-200 hover:-translate-y-0.5"
-                }
-              >
-                {each.value}
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-row">
+            <div className="flex flex-col w-2/3">
+              {educationItems.header.map((each) => (
+                <div key={each.value} className={each.className}>
+                  {each.value}
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col w-1/3 ml-0 lg:ml-10">
+              {educationItems.detail.map((each) => (
+                <div
+                  key={each.value}
+                  className={
+                    each.className +
+                    " transition duration-200 hover:-translate-y-0.5"
+                  }
+                >
+                  {each.value}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <div className="mt-5 flex flex-col rounded-lg bg-zinc-700">
@@ -236,7 +236,7 @@ export const About = ({
         </ul>
       </div>
       <footer className="m-5 text-center">
-        <h1 className="text-zinc-400 transition duration-150 hover:scale-105 hover:text-white">
+        <h1 className="text-sm lg:text-base text-zinc-400 transition duration-150 hover:scale-105 hover:text-white">
           Copyright © 2022 Suphakorn Homnan
         </h1>
       </footer>
