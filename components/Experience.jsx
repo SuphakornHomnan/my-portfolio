@@ -117,7 +117,7 @@ const ExperienceSection = ({
         <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
           Job Description
           {jobDescription.map((each) => (
-            <li className="text-xs text-zinc-50 lg:text-sm">- {each}</li>
+            <li key={each} className="text-xs text-zinc-50 lg:text-sm">- {each}</li>
           ))}
         </ul>
         <p className="mt-1.5 lg:mt-2 text-sm font-bold text-zinc-50 lg:text-base">
