@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { convertDateTime } from "../util/handle-date";
 export const ExperienceMain = () => {
   const experiencesInfo = [
     {
@@ -87,46 +87,6 @@ const ExperienceSection = ({
   skills,
   link,
 }) => {
-  function convertDateToString(date) {
-    let [year, month] = date.split("-");
-    switch (month) {
-      case "01":
-        return `January ${year}`;
-      case "02":
-        return `February ${year}`;
-      case "03":
-        return `March ${year}`;
-      case "04":
-        return `April ${year}`;
-      case "05":
-        return `May ${year}`;
-      case "06":
-        return `June ${year}`;
-      case "07":
-        return `July ${year}`;
-      case "08":
-        return `August ${year}`;
-      case "09":
-        return `September ${year}`;
-      case "10":
-        return `October ${year}`;
-      case "11":
-        return `November ${year}`;
-      case "12":
-        return `December ${year}`;
-      default:
-        break;
-    }
-  }
-
-  function convertDateTime(start, end) {
-    if (end === "") {
-      return `${convertDateToString(start)} - Present`;
-    } else {
-      return `${convertDateToString(start)} - ${convertDateToString(end)}`;
-    }
-  }
-  console.log(link);
   return (
     <div className="ml-5 flex flex-row p-1 lg:p-2">
       <div className="relative h-14 w-1/5 transition duration-200 ease-in hover:scale-110 md:h-16 md:w-16 lg:h-20 lg:w-20">
@@ -154,14 +114,17 @@ const ExperienceSection = ({
           {convertDateTime(startDate, endDate)}
         </p>
         <p className="text-xs text-[#D2DADE] lg:text-sm">{location}</p>
-        <ul className="mt-2 text-[#D2DADE] text-sm lg:text-base">
+        <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
           Job Description
           {jobDescription.map((each) => (
             <li className="text-xs text-zinc-50 lg:text-sm">- {each}</li>
           ))}
         </ul>
-        <p className="font-bold text-zinc-50 text-sm lg:text-base">
-          Skills: <span className="text-xs font-thin lg:text-sm lg:font-normal">{skills}</span>
+        <p className="mt-1.5 lg:mt-2 text-sm font-bold text-zinc-50 lg:text-base">
+          Skills:{" "}
+          <span className="text-xs font-thin lg:text-sm lg:font-normal">
+            {skills}
+          </span>
         </p>
       </div>
     </div>

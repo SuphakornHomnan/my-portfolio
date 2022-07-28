@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CertificateSection } from "./CertificateSection";
 import { ExperienceMain } from "./Experience";
+import { EducationMain } from "./EducationSection";
 export const About = ({
   profile,
   profileAlt,
@@ -9,7 +10,6 @@ export const About = ({
   description,
   languages,
   quickLinks,
-  skills,
 }) => {
   const certifateItemsOne = [
     {
@@ -177,36 +177,8 @@ export const About = ({
           </ul>
         </div>
       </div>
-      <div className="mt-5 grid grid-cols-7 gap-8">
-        <div className="col-span-7 flex max-w-xl flex-col lg:col-span-2">
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-50 transition duration-200 hover:-translate-y-1">
-            Education
-          </h3>
-          <div className="flex flex-row">
-            <div className="flex w-2/3 flex-col">
-              {educationItems.header.map((each) => (
-                <div key={each.value} className={each.className}>
-                  {each.value}
-                </div>
-              ))}
-            </div>
-            <div className="ml-0 flex w-1/3 flex-col lg:ml-10">
-              {educationItems.detail.map((each) => (
-                <div
-                  key={each.value}
-                  className={
-                    each.className +
-                    " transition duration-200 hover:-translate-y-0.5"
-                  }
-                >
-                  {each.value}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
+      <EducationMain />
       <ExperienceMain />
 
       <div className="mt-5 flex flex-col rounded-lg bg-zinc-700">
