@@ -8,14 +8,6 @@ const Homepage = () => {
     "GO",
     "SQL",
   ];
-
-  const mySkills = [
-    "Design Database",
-    "Implement APIs (RESTful, GraphQL)",
-    "Implement a unit test with Jest",
-    "Implement APIs Document (OpenAPI)",
-    "Implement a Components page (React, NextJs)",
-  ];
   const quickLinks = [
     {
       text: "Github",
@@ -35,12 +27,11 @@ const Homepage = () => {
         profileAlt="Nice"
         subtitle="Fullstack Developer"
         title="Suphakorn Homnan"
-        description={`I'm a fullstack javascript developer in Larngear Technology, Remote work. I'm familar with a write an APIs and design a database by SQL and NoSQL but I also write a components of a landing
-      webpage. I used to design a database about CRM project. I have a passionate to be a clean code and highly quality code.
+        description={`I'm a fullstack javascript developer in Larngear Technology co. at Bangkok, I'm a remotely work. My expertise is writing an APIs, Design the database by SQL and NoSQL and write a components of a landing
+      webpage as well. Recently, I used to design a database about CRM project to my old company. I've a passionate to be a clean code, highly quality code and improve myself when I'm free.
       `}
         languages={languages}
         quickLinks={quickLinks}
-        skills={mySkills}
       />
     </Layout>
   );
