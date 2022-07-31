@@ -46,6 +46,15 @@ export const About = ({
         "https://drive.google.com/file/d/1craA9WJ-0H5HfkiR-_sjldqCykGDQGLh/view?usp=sharing",
     },
     {
+      title:
+        "The Complete Guide to Kubernetes",
+      logo: "/futureskill.svg",
+      company: "FutureSkill",
+      date: "Issued by July 2022",
+      links:
+        "https://drive.google.com/file/d/13-E8RfWGjIhXLAw2SoAplDTnIcEOvvoE/view?usp=sharing",
+    },
+    {
       title: "Purpose-built-Database",
       logo: "/skooldio.jpeg",
       company: "Skooldio",
@@ -62,52 +71,6 @@ export const About = ({
         "https://www.skooldio.com/certificate/734363fe-54b1-440e-83b9-ee6b2ad4423d",
     },
   ];
-  const educationItems = {
-    header: [
-      {
-        className:
-          "text-sm text-zinc-400 transition duration-200 hover:text-zinc-300 hover:translate-x-1",
-        value: "Chaing Mai University",
-      },
-      {
-        className:
-          "text-xs text-zinc-500 transition duration-200 hover:text-zinc-400 hover:translate-x-1",
-        value: "Bachelor of Engineering (Computer Engineering)",
-      },
-      {
-        className:
-          "text-sm text-zinc-400 transition duration-200 hover:text-zinc-300 hover:translate-x-1",
-        value: "Assumption College Lampang",
-      },
-      {
-        className:
-          "text-xs text-zinc-500 transition duration-200 hover:text-zinc-400 hover:translate-x-1",
-        value: "Math-Science room",
-      },
-    ],
-    detail: [
-      {
-        className:
-          "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
-        value: "GPA 2.98",
-      },
-      {
-        className:
-          "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
-        value: "2017-2021",
-      },
-      {
-        className:
-          "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
-        value: "GPA 3.38",
-      },
-      {
-        className:
-          "mt-0.5 md:mt-1 lg:mt-2 text-xs text-zinc-400 text-[#FFA65C]",
-        value: "2015-2017",
-      },
-    ],
-  };
 
   return (
     <section className="bg-zinc-800 p-10 lg:p-20">
