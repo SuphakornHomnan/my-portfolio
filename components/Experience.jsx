@@ -10,8 +10,9 @@ export const ExperienceMain = () => {
       endDate: "",
       location: "Bangkok, Thailand",
       jobDescription: [
-        "Implement Components with NextJs",
-        "Implement APIs and unit test for each API service",
+        "Implement UI and Integrate Service in Components",
+        "Implement APIs for each API service",
+        "Fix bugs",
       ],
       skills: `
             Nextjs · RESTfulAPIs · Jest · OpenAPI · NestJS · PostgreSQL · Docker
