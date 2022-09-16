@@ -1,44 +1,7 @@
 import Image from "next/image";
 import { convertDateTime } from "../util/handle-date";
-export const ExperienceMain = () => {
-  const experiencesInfo = [
-    {
-      img: "/Larngear.png",
-      position: "Fullstack Web Developer",
-      company: "Larngear Technology co.,ltd · Full-time",
-      startDate: "2022-08",
-      endDate: "",
-      location: "Bangkok, Thailand",
-      jobDescription: [
-        "Implement UI and Integrate Service in Components",
-        "Implement APIs for each API service",
-        "Fix bugs",
-      ],
-      skills: `
-            Nextjs · RESTfulAPIs · Jest · OpenAPI · NestJS · PostgreSQL · Docker
-            `,
-      link: "http://www.larngeartech.com/",
-    },
-    {
-      img: "/wisdomlogo.png",
-      position: "Backend Web Developer",
-      company: "Wisdom Epic Coding · Full-time",
-      startDate: "2021-05",
-      endDate: "2022-07",
-      location: "Chiang Mai, Thailand",
-      jobDescription: [
-        "Design ER-Diagram",
-        "Design the database (Table, Collection)",
-        "Implement APIs and unit test for each API service",
-        "Write all documents about backend (APIs Document, Description of schemas, Document of all static values)",
-        "Write the custom script for organizing those data to make the report",
-      ],
-      skills: `
-        Database Design · RESTfulAPIs · Jest · OpenAPI · NestJS · ExpressJs · MongoDB · PostgreSQL · Docker
-        `,
-      link: "https://www.wdepic.com/",
-    },
-  ];
+import { experiencesInfo } from "../util/constant/detail.constant";
+export const Experiences = () => {
   return (
     <div className="mt-5 flex flex-col rounded-lg bg-zinc-700">
       <h3 className="m-4 text-lg font-semibold uppercase tracking-wide text-zinc-50 transition duration-300 hover:translate-x-3 hover:underline">
@@ -118,10 +81,12 @@ const ExperienceSection = ({
         <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
           Job Description
           {jobDescription.map((each) => (
-            <li key={each} className="text-xs text-zinc-50 lg:text-sm">- {each}</li>
+            <li key={each} className="text-xs text-zinc-50 lg:text-sm">
+              - {each}
+            </li>
           ))}
         </ul>
-        <p className="mt-1.5 lg:mt-2 text-sm font-bold text-zinc-50 lg:text-base">
+        <p className="mt-1.5 text-sm font-bold text-zinc-50 lg:mt-2 lg:text-base">
           Skills:{" "}
           <span className="text-xs font-thin lg:text-sm lg:font-normal">
             {skills}

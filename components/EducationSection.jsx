@@ -1,25 +1,8 @@
 import Image from "next/image";
 import { convertDateTime } from "../util/handle-date";
+import { infoList } from "../util/constant/detail.constant";
 
-export const EducationMain = () => {
-  const infoList = [
-    {
-      logo: "/cmu.png",
-      title: "Chiang Mai University",
-      degree: "Bachelor of Engineering - BE, Computer Engineering",
-      startDate: "2017-08",
-      endDate: "2021-04",
-      grade: 2.98,
-    },
-    {
-      logo: "/acl.png",
-      title: "Assumption College Lampang",
-      degree: "High School",
-      startDate: "2014-05",
-      endDate: "2017-02",
-      grade: 3.38,
-    },
-  ];
+export const Educations = () => {
   return (
     <div className="mt-5 flex flex-col rounded-lg bg-zinc-700">
       <h3 className="m-4 text-lg font-semibold uppercase tracking-wide text-zinc-50 transition duration-300 hover:translate-x-3 hover:underline">
