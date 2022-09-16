@@ -1,7 +1,7 @@
 export const languages = [
   "Javascript, Typescript",
   "Java, Scala",
-  "Python, SQL, R",
+  "Python, SQL, R, Google sheets",
   "C, C++",
   "GO",
 ];

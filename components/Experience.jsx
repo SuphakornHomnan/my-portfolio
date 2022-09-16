@@ -5,7 +5,7 @@ export const Experiences = () => {
   return (
     <div className="mt-5 flex flex-col rounded-lg bg-zinc-700">
       <h3 className="m-4 text-lg font-semibold uppercase tracking-wide text-zinc-50 transition duration-300 hover:translate-x-3 hover:underline">
-        Experience
+        Experiences
       </h3>
       <div className="h-80 list-none space-y-1 overflow-y-auto">
         {experiencesInfo.map(
