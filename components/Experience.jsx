@@ -5,7 +5,7 @@ export const Experiences = () => {
   return (
     <div className="mt-5 flex flex-col rounded-lg bg-zinc-700">
       <h3 className="m-4 text-lg font-semibold uppercase tracking-wide text-zinc-50 transition duration-300 hover:translate-x-3 hover:underline">
-        Experiences
+        Work Experiences
       </h3>
       <div className="h-80 list-none space-y-1 overflow-y-auto">
         {experiencesInfo.map(
@@ -16,6 +16,7 @@ export const Experiences = () => {
             startDate,
             endDate,
             location,
+            companyDetail,
             jobDescription,
             skills,
             link,
@@ -28,6 +29,7 @@ export const Experiences = () => {
                 startDate={startDate}
                 endDate={endDate}
                 location={location}
+                companyDetail={companyDetail}
                 jobDescription={jobDescription}
                 skills={skills}
                 link={link}
@@ -47,6 +49,7 @@ const ExperienceSection = ({
   startDate,
   endDate,
   location,
+  companyDetail,
   jobDescription,
   skills,
   link,
@@ -78,6 +81,14 @@ const ExperienceSection = ({
           {convertDateTime(startDate, endDate)}
         </p>
         <p className="text-xs text-[#D2DADE] lg:text-sm">{location}</p>
+        <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
+          Company Detail
+          {companyDetail?.map((each) => (
+            <li key={each} className="text-xs text-zinc-50 lg:text-sm ml-3 mt-1">
+              {each}
+            </li>
+          ))}
+        </ul>
         <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
           Job Description
           {jobDescription.map((each) => (

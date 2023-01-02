@@ -30,10 +30,85 @@ function convertDateToString(date) {
   }
 }
 
+function toYyyyMmString(date) {
+  // Get the year and month values from the date object
+  const year = date.getFullYear();
+  let month = date.getMonth() + 1; // getMonth() returns a zero-based month value, so we need to add 1
+
+  // Add leading zeros to the month value if necessary
+  month = month.toString().padStart(2, "0");
+
+  // Return the date in the "yyyy-mm" format
+  return `${year}-${month}`;
+}
+
 export function convertDateTime(start, end) {
   if (end === "") {
-    return `${convertDateToString(start)} - Present`;
+    return `${convertDateToString(start)} - Present · ${durationDisplay(
+      start,
+      toYyyyMmString(new Date())
+    )}`;
   } else {
-    return `${convertDateToString(start)} - ${convertDateToString(end)}`;
+    return `${convertDateToString(start)} - ${convertDateToString(
+      end
+    )} · ${durationDisplay(start, end)}`;
   }
+}
+
+export function convertYearMonth(startDates, endDates) {
+  const startYear = parseInt(startDates[0], 10);
+  const startMonth = parseInt(startDates[1], 10);
+  const endYear = parseInt(endDates[0], 10);
+  const endMonth = parseInt(endDates[1], 10);
+
+  return {
+    startYear,
+    startMonth,
+    endYear,
+    endMonth,
+  };
+}
+
+export function calculateDuration(dateObj) {
+  const { startYear, startMonth, endYear, endMonth } = dateObj;
+  let durationYears = endYear - startYear;
+  let durationMonths = endMonth - startMonth;
+  if (durationMonths < 0) {
+    durationYears--;
+    durationMonths += 12;
+  }
+
+  return {
+    durationYears,
+    durationMonths,
+  };
+}
+
+export function pluralize(num, word) {
+  // Add an "s" to the word if the number is not 1
+  if (num === 0) {
+    return "";
+  }
+  if (num > 1) {
+    word += "s";
+  }
+  // Return the number and the pluralized word
+  return `${num} ${word}`;
+}
+
+/*
+  Input start, end = format(yyyy,mm) -> "2022-05"
+*/
+export function durationDisplay(start, end) {
+  const startDates = start.split("-");
+  const endDates = end.split("-");
+
+  const { durationYears, durationMonths } = calculateDuration(
+    convertYearMonth(startDates, endDates)
+  );
+
+  return `${pluralize(durationYears, "yr")} ${pluralize(
+    durationMonths,
+    "mon"
+  )}`;
 }
