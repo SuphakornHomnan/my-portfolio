@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Fragment } from "react";
 import { convertDateTime } from "../util/handle-date";
 import { experiencesInfo } from "../util/constant/detail.constant";
 export const Experiences = () => {
@@ -16,8 +17,7 @@ export const Experiences = () => {
             startDate,
             endDate,
             location,
-            companyDetail,
-            jobDescription,
+            description,
             skills,
             link,
           }) => (
@@ -29,8 +29,7 @@ export const Experiences = () => {
                 startDate={startDate}
                 endDate={endDate}
                 location={location}
-                companyDetail={companyDetail}
-                jobDescription={jobDescription}
+                description={description}
                 skills={skills}
                 link={link}
               />
@@ -49,8 +48,7 @@ const ExperienceSection = ({
   startDate,
   endDate,
   location,
-  companyDetail,
-  jobDescription,
+  description,
   skills,
   link,
 }) => {
@@ -81,22 +79,14 @@ const ExperienceSection = ({
           {convertDateTime(startDate, endDate)}
         </p>
         <p className="text-xs text-[#D2DADE] lg:text-sm">{location}</p>
-        <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
-          Company Detail
-          {companyDetail?.map((each) => (
-            <li key={each} className="text-xs text-zinc-50 lg:text-sm ml-3 mt-1">
-              {each}
-            </li>
+        <p className="text-xs text-zinc-50 lg:text-sm">
+          {description.split("\n").map((line, index) => (
+            <Fragment key={index}>
+              {line.trim()}
+              <br />
+            </Fragment>
           ))}
-        </ul>
-        <ul className="mt-2 text-sm text-[#D2DADE] lg:text-base">
-          Job Description
-          {jobDescription.map((each) => (
-            <li key={each} className="text-xs text-zinc-50 lg:text-sm">
-              - {each}
-            </li>
-          ))}
-        </ul>
+        </p>
         <p className="mt-1.5 text-sm font-bold text-zinc-50 lg:mt-2 lg:text-base">
           Skills:{" "}
           <span className="text-xs font-thin lg:text-sm lg:font-normal">

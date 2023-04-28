@@ -53,14 +53,10 @@ export const experiencesInfo = [
     startDate: "2022-08",
     endDate: "2023-01",
     location: "Nonthaburi, Thailand · Remote",
-    companyDetail: [
-      "Larngear Technology has demonstrated unwavering commitment to the research and development of cutting-edge Augmented Reality (AR) solutions, thereby cementing its position as one of the foremost providers of AR solutions worldwide.",
-    ],
-    jobDescription: [
-      "Designed and developed an Education Tech platform's website with both front-end and back-end capabilities, serving a user base of 10,000 students.",
-      "Led weekly feature demonstrations of the platform to key companies, including CPF and Axios, both sub-branches of the CP IT group, together with the Chiang Mai development team.",
-      "Managed a team of software engineers in Chiang Mai, collaborating with a part-time Senior Software Engineer.",
-    ],
+    description: `Larngear Technology has demonstrated unwavering commitment to the research and development of cutting-edge Augmented Reality (AR) solutions, thereby cementing its position as one of the foremost providers of AR solutions worldwide.
+    • Developed an Education Tech platform's website with front and back-office functionalities for a user base of 10,000 students.
+    • Presented weekly demos of the platform's features to prominent companies- CPF and Axios, both sub-branches of CP IT group- with the Chiang Mai development team.
+    • Managed a team of software engineers in Chiang Mai, alongside a part-time Senior Software Engineer.`,
     skills: `
     Next.js · Docker · NestJS
             `,
@@ -73,15 +69,10 @@ export const experiencesInfo = [
     startDate: "2021-05",
     endDate: "2022-07",
     location: "Chiang Mai, Thailand · Hybrid",
-    companyDetail: [
-      "This company specializes in developing applications that support the real estate industry, particularly for Wisdom Property, an estate company. In addition, they also provide software development services to other businesses as a software house.",
-    ],
-    jobDescription: [
-      "Developed and maintained a back-office system supporting the properties and estates information, with estimated values ranging from £12,900 to £129,000.",
-      "Generated monthly data reports for management analysis of the number of estates acquired or sold by the company.",
-      "Tested APIs using Postman and Jest, performing manual tests and writing integration tests to verify the expected responses and logic of the APIs.",
-      "Wrote integration tests to check the logic of APIs to achieve the expected results",
-    ],
+    description: `This company specializes in developing applications that support the real estate industry, particularly for Wisdom Property, an estate company. In addition, they also provide software development services to other businesses as a software house.
+    • Developed and maintained a back-office system supporting the properties and estates information, with estimated values ranging from £12,900 to £129,000.
+    • Generated monthly data reports for management analysis of the number of estates acquired or sold by the company.
+    • Tested APIs using Postman and Jest, performing manual tests and writing integration tests to verify the expected responses and logic of the APIs.`,
     skills: `
     SQL · MongoDB · NoSQL · FastAPI · Docker · Express.js · NestJS · Python · JavaScript
         `,
@@ -94,14 +85,9 @@ export const experiencesInfo = [
     startDate: "2020-05",
     endDate: "2020-07",
     location: "Nonthaburi, Thailand · Remote",
-    companyDetail: [
-      "This enterprise is engaged in the distribution of air compressors as well as the provision of maintenance services for power plants.",
-    ],
-    jobDescription: [
-      "Designed and maintained the customer service back office database system, including inventory and spare parts lists",
-      "Implemented a scheduling system for spare parts orders",
-      "Directly reports to Mr. Soontorn Ongsupankul, the Managing Director"
-    ],
+    description: `This enterprise is engaged in the distribution of air compressors as well as the provision of maintenance services for power plants.
+    • Designed and maintained the customer service back office database system, including inventory and spare parts lists
+    • Directly reports to Mr. Soontorn Ongsupankul, the Managing Director`,
     skills: `
     Microsoft Excel · SQL · Python
     `,
