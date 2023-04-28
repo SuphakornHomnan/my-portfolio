@@ -30,15 +30,13 @@ function convertDateToString(date) {
   }
 }
 
-function toYyyyMmString(date) {
-  // Get the year and month values from the date object
+function formatYYYYMM(date) {
   const year = date.getFullYear();
-  let month = date.getMonth() + 1; // getMonth() returns a zero-based month value, so we need to add 1
+  let month = date.getMonth() + 1;
 
   // Add leading zeros to the month value if necessary
   month = month.toString().padStart(2, "0");
 
-  // Return the date in the "yyyy-mm" format
   return `${year}-${month}`;
 }
 
@@ -46,7 +44,7 @@ export function convertDateTime(start, end) {
   if (end === "") {
     return `${convertDateToString(start)} - Present · ${durationDisplay(
       start,
-      toYyyyMmString(new Date())
+      formatYYYYMM(new Date())
     )}`;
   } else {
     return `${convertDateToString(start)} - ${convertDateToString(
@@ -108,7 +106,7 @@ export function durationDisplay(start, end) {
   );
 
   return `${pluralize(durationYears, "yr")} ${pluralize(
-    durationMonths,
-    "mon"
+    durationMonths + 1,
+    "mo"
   )}`;
 }
