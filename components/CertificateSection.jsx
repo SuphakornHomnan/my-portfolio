@@ -6,7 +6,7 @@ export const Certificates = () => (
     <h3 className="m-4 text-lg font-semibold uppercase tracking-wide text-zinc-50 transition duration-300 hover:translate-x-3 hover:underline">
       Online Course Certifications
     </h3>
-    <ul className="h-80 list-none space-y-1 overflow-y-auto">
+    <ul className="h-[400px] list-none space-y-1 overflow-y-auto">
       {certificateItemsOne.map(
         ({ title, logo, company, date, links, credentialId }) => (
           <li key={title}>
