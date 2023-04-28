@@ -7,8 +7,8 @@ import {
   quickLinks,
   headerDetail,
   description,
-  certificateItemsOne,
 } from "../util/constant/detail.constant";
+import { TextExpand } from "../util/text-expand";
 
 const AboutHeader = () => {
   return (
@@ -48,7 +48,13 @@ const SecondParagraph = () => {
         <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-50 transition duration-200 hover:-translate-y-1">
           About
         </h3>
-        <p className="text-sm text-zinc-400">{description}</p>
+        {description && (
+          <TextExpand
+            text={description}
+            maxLength={100}
+            className={"text-sm text-zinc-400"}
+          />
+        )}
       </div>
       <div className="col-span-7 flex max-w-xl flex-col lg:col-span-2">
         <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-50 transition duration-200 hover:-translate-y-1">
