@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Fragment } from "react";
 import { convertDateTime } from "../util/handle-date";
+import { DescriptionExpand } from "../util/text-expand";
 import { experiencesInfo } from "../util/constant/detail.constant";
 export const Experiences = () => {
   return (
@@ -8,7 +8,7 @@ export const Experiences = () => {
       <h3 className="m-4 text-lg font-semibold uppercase tracking-wide text-zinc-50 transition duration-300 hover:translate-x-3 hover:underline">
         Work Experiences
       </h3>
-      <div className="h-[800px] list-none space-y-1 overflow-y-auto">
+      <div className="h-auto list-none space-y-1 overflow-y-auto">
         {experiencesInfo.map(
           ({
             img,
@@ -79,14 +79,12 @@ const ExperienceSection = ({
           {convertDateTime(startDate, endDate)}
         </p>
         <p className="text-xs text-[#D2DADE] lg:text-sm">{location}</p>
-        <p className="text-xs text-zinc-50 lg:text-sm">
-          {description.split("\n").map((line, index) => (
-            <Fragment key={index}>
-              {line.trim()}
-              <br />
-            </Fragment>
-          ))}
-        </p>
+        {description && (
+          <div className="text-xs text-zinc-50 lg:text-sm">
+            <DescriptionExpand description={description} />
+          </div>
+        )}
+
         <p className="mt-1.5 text-sm font-bold text-zinc-50 lg:mt-2 lg:text-base">
           Skills:{" "}
           <span className="text-xs font-thin lg:text-sm lg:font-normal">
