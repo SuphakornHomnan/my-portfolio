@@ -56,8 +56,11 @@ const CertificateSection = ({
             {title}
           </a>
         </div>
+        <p className="text-xs font-normal text-zinc-50 lg:text-sm">
+          {company}
+        </p>
         <p className="text-xs font-normal text-zinc-400 lg:text-sm">
-          {date} | No Expiration Date
+          {date}
         </p>
         <p className="text-xs font-normal text-zinc-400 lg:text-sm">
           {credentialId && `Credential ID ${credentialId}`}
