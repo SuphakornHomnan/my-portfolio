@@ -1,8 +1,7 @@
 export const languages = [
-  "Javascript, Typescript",
-  "Python, SQL, R, Excel",
-  "C, C++",
-  "GO",
+  "Data Analysis: Python, R, SQL, VBA",
+  "Web Development: Javascript, Typescript",
+  "Others: C, C++, Java"
 ];
 export const quickLinks = [
   {
@@ -17,16 +16,33 @@ export const quickLinks = [
 ];
 
 export const description =
-  "As an experienced full-stack software engineer, I have served in this role for two years, with a particular interest in the intersection of business operations and data analytics. I find great satisfaction in sourcing relevant data, processing it into meaningful information, and presenting it to data analysts in a comprehensible format. My technical expertise includes web development and database design.";
+  `
+  I have two years of experience in a software engineer position developing  
+  SME real estate and e-learning platforms. In my last job, I was responsible for organizing my small 
+  developer team to release the features of an e-learning project: a course, a test, and a few back-office report modules. 
+  My technical expertise is in the developed-backend side. 
+  Then, the University of Bath offered me an MSc in Business Analytics
+   to transition my future career path to related analyst positions. I specialized in R, SQL, and VBA 
+   while studying for my Master's degree. Now, I am consistently studying business intelligence tools (Tableau, Power BI) 
+   to enhance the professional skills that will support me when I work as an analyst in the future.
+`;
 
 export const headerDetail = {
-  profile: "/me.jpeg",
+  profile: "/me.jpg",
   profileAlt: "Nice",
-  subtitle: "Fullstack Developer",
+  subtitle: "Data Analyst",
   title: "Suphakorn Homnan",
 };
 
 export const infoList = [
+  {
+    logo: "/bath.jpeg",
+    title: "University of Bath",
+    degree: "Master of Science - MSc, Business Analytics",
+    startDate: "2023-10",
+    endDate: "2024-10",
+    grade: 'not released',
+  },
   {
     logo: "/cmu.png",
     title: "Chiang Mai University",
