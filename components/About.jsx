@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Certificates } from "./CertificateSection";
 import { Experiences } from "./Experience";
 import { Educations } from "./EducationSection";
+import { Projects } from "./Project";
 import {
   languages,
   quickLinks,
@@ -24,18 +25,13 @@ const AboutHeader = () => {
       </div>
 
       <div>
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-zinc-400 md:ml-3 lg:ml-3">
-          Hello, I&apos;m a <br className="block md:hidden" />
-          <span className="relative">
-            <span className="text-brand-accent h-20 overflow-x-hidden whitespace-nowrap pt-2">
-              {headerDetail.subtitle}
-            </span>
-            <span className="{`${styles.cursor} will-change-transform`} absolute -bottom-0 left-0 -top-1 inline-block w-full animate-type bg-zinc-800"></span>
-          </span>
-        </p>
         <h1 className="ml-0 mb-2 flex font-serif text-3xl text-zinc-50 md:ml-3 lg:ml-3 lg:text-6xl">
           {headerDetail.title} <span className="animate-waving-hand">👋🏻</span>
         </h1>
+
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-zinc-400 md:ml-4 lg:ml-4">
+          {headerDetail.subtitle}
+        </p>
       </div>
     </header>
   );
@@ -58,7 +54,7 @@ const SecondParagraph = () => {
       </div>
       <div className="col-span-7 flex max-w-xl flex-col lg:col-span-2">
         <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-50 transition duration-200 hover:-translate-y-1">
-          Computer Languages
+          Skills
         </h3>
         <ul className="list-none space-y-1">
           {languages.map((lang) => (
@@ -92,13 +88,14 @@ const SecondParagraph = () => {
   );
 };
 
-export const About = () => {
+export const PageComponents = () => {
   return (
     <section className="bg-zinc-800 p-10 lg:p-20">
       <AboutHeader />
       <SecondParagraph />
       <Educations />
       <Experiences />
+      <Projects />
       <Certificates />
       <footer className="m-5 text-center">
         <h1 className="text-sm text-zinc-400 transition duration-150 hover:scale-105 hover:text-white lg:text-base">

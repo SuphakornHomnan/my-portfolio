@@ -1,7 +1,7 @@
 export const languages = [
-  "Data Analysis: Python, R, SQL, VBA",
-  "Web Development: Javascript, Typescript",
-  "Others: C, C++, Java"
+  "Advanced: Javascript, Typescript",
+  "Intermediated: VBA, Python, R, SQL, Tableau, Docker, English (TOEIC 745)",
+  "Soft skills: Problem-solving, Discipline, Time management, Adaptability",
 ];
 export const quickLinks = [
   {
@@ -15,22 +15,22 @@ export const quickLinks = [
   { text: "Email", href: "mailto:supakornhomnan@gmail.com" },
 ];
 
-export const description =
-  `
-  I have two years of experience in a software engineer position developing  
-  SME real estate and e-learning platforms. In my last job, I was responsible for organizing my small 
-  developer team to release the features of an e-learning project: a course, a test, and a few back-office report modules. 
-  My technical expertise is in the developed-backend side. 
-  Then, the University of Bath offered me an MSc in Business Analytics
-   to transition my future career path to related analyst positions. I specialized in R, SQL, and VBA 
-   while studying for my Master's degree. Now, I am consistently studying business intelligence tools (Tableau, Power BI) 
-   to enhance the professional skills that will support me when I work as an analyst in the future.
+export const description = `
+  Experienced Software Engineer and Business Analytics graduate with expertise in data analysis, 
+  predictive modeling, and dashboard creation. Proficient in R, Python, SQL, Tableau, and VBA, 
+  with hands-on experience in optimizing systems. Passionate about analyzing customer needs and 
+  marketing trends and developing data-driven strategies. Eager to contribute analytical approaches and 
+  strategic planning by converting complex data into actionable insights, addressing the business goals.
+
+Currently seeking employment in Bangkok. I am interested in analyst and data scientist roles to leverage 
+analytical skills and experience in delivering actionable insights and identifying potential opportunities
+ to drive business growth.
 `;
 
 export const headerDetail = {
   profile: "/me.jpg",
   profileAlt: "Nice",
-  subtitle: "Data Analyst",
+  subtitle: "Data Enthusiast",
   title: "Suphakorn Homnan",
 };
 
@@ -41,7 +41,7 @@ export const infoList = [
     degree: "Master of Science - MSc, Business Analytics",
     startDate: "2023-10",
     endDate: "2024-10",
-    grade: 'not released',
+    grade: "Merit (Second Class Honour)",
   },
   {
     logo: "/cmu.png",
@@ -70,11 +70,13 @@ export const experiencesInfo = [
     endDate: "2023-01",
     location: "Nonthaburi, Thailand · Remote",
     description: `Larngear Technology has demonstrated unwavering commitment to the research and development of cutting-edge Augmented Reality (AR) solutions, thereby cementing its position as one of the foremost providers of AR solutions worldwide.
-    • Developed an Education Tech platform's website with front and back-office functionalities for a user base of 10,000 students.
-    • Presented weekly demos of the platform's features to prominent companies- CPF and Axios, both sub-branches of CP IT group- with the Chiang Mai development team.
-    • Managed a team of software engineers in Chiang Mai, alongside a part-time Senior Software Engineer.`,
+      • Built an internal Learning Management System (LMS) for food industry corporations
+      • Wrote SQL queries to manage and organize data in the back-office system
+      • Planned tasks for an agile workflow in two-week sprints with the project manager
+      • Applied Docker images to ensure a consistent development environment
+`,
     skills: `
-    Next.js · Docker · NestJS
+    Next.js, Docker, NestJS, Project Management, Jira, SQL, Query Writing
             `,
     link: "http://www.larngeartech.com/",
   },
@@ -86,32 +88,114 @@ export const experiencesInfo = [
     endDate: "2022-07",
     location: "Chiang Mai, Thailand · Hybrid",
     description: `This company specializes in developing applications that support the real estate industry, particularly for Wisdom Property, an estate company. In addition, they also provide software development services to other businesses as a software house.
-    • Developed and maintained a back-office system supporting the properties and estates information, with estimated values ranging from £12,900 to £129,000.
-    • Generated monthly data reports for management analysis of the number of estates acquired or sold by the company.
-    • Tested APIs using Postman and Jest, performing manual tests and writing integration tests to verify the expected responses and logic of the APIs.`,
+    • Developed back-office systems
+    • Designed an unstructured NoSQL database to support the real estate business
+    • Collaborated with the development team to brainstorm customer needs
+    • Delivered tasks every two weeks as part of the development cycle
+    • Generated monthly reports on the number of estates and realty properties to help business teams conduct further analysis`,
     skills: `
-    SQL · MongoDB · NoSQL · FastAPI · Docker · Express.js · NestJS · Python · JavaScript
+    JavaScript · MongoDB · Express.js · NoSQL · Docker
         `,
-    link: "https://www.wdepic.com/",
+    link: "https://thewisdomproperty.com/",
+  },
+];
+
+export const projectsInfo = [
+  {
+    title:
+      "Clustering and Thematic Analysis of TikTok Content For Insights into Social Media Trends",
+    logo: "/bath.jpeg",
+    company: "University of Bath",
+    startDate: "2024-06",
+    endDate: "2024-08",
+    description: `
+  •  Collected raw TikTok data using a data scraping technique
+  •  Preprocessed text data by removing punctuation, emojis, stopwords, non-English text, and applying lemmatization approach
+  •  Implemented TF-IDF and PCA to transform text data into a distance matrix for machine learning models, improving feature extraction for training
+  •  Built K-means, Hierarchical Clustering, and LDA topic modeling to categorize TikTok videos
+  •  Selected the LDA model, as K-means and Hierarchical Clustering led to overfitting when visualizing clustering results
+  •  Presented insights on the top three popular video categories: Entertainment, Social Media, and Humour
+  `,
+    skills: `
+  Exploratory Data Analysis, Text Mining, Text Clustering, Text preprocessing, Data Visualization
+  `,
+    link: "https://drive.google.com/file/d/17El9vNVcJ_GgbW7yk6jMOqrWsisupX4U/view",
   },
   {
-    img: "/hicare.png",
-    position: "Associated Backend Software Engineer",
-    company: "Hicare service Co. Ltd · Internship",
-    startDate: "2020-05",
-    endDate: "2020-07",
-    location: "Nonthaburi, Thailand · Remote",
-    description: `This enterprise is engaged in the distribution of air compressors as well as the provision of maintenance services for power plants.
-    • Designed and maintained the customer service back office database system, including inventory and spare parts lists
-    • Directly reports to Mr. Soontorn Ongsupankul, the Managing Director`,
+    title:
+      "M3 Competition Forecasting Model",
+    logo: "/bath.jpeg",
+    company: "University of Bath",
+    startDate: "2023-12",
+    endDate: "2024-01",
+    description: `
+    • Explored data using statistical descriptive summaries and decomposition to identify trends and seasonal patterns
+    • Built Regression, ETS, and ARIMA models with a single-batch time series dataset
+    • Developed Auto ETS, Auto ARIMA, and a model selection strategy for 100-batch time series data
+    • Implemented cross-validation to train Auto ETS and Auto ARIMA, utilizing parallel execution to reduce computation time (originally over an hour, reduced to 25.16 minutes)    
+  `,
     skills: `
-    Microsoft Excel · SQL · Python
-    `,
-    link: "https://www.hicareservice.com/",
+    Forecasting, Data Modeling, R (Programming Language), Analytical Skills
+  `,
+    link: "https://drive.google.com/file/d/1BjkRMGJvAiFtzgCJ9ze-lCJci9WqO7a2/view",
   },
 ];
 
 export const certificateItemsOne = [
+  {
+    title: "Supervised Machine Learning: Regression and Classification ",
+    logo: "/deep_learning.png",
+    company: "DeepLearning.AI",
+    date: "Issued by February 2025",
+    links:
+      "https://www.coursera.org/account/accomplishments/verify/R3Y2BX5V1L01",
+    credentialId: "R3Y2BX5V1L01",
+  },
+  {
+    title: "Advanced Learning Algorithms",
+    logo: "/deep_learning.png",
+    company: "DeepLearning.AI",
+    date: "Issued by February 2025",
+    links:
+      "https://www.coursera.org/account/accomplishments/verify/PWRUYQRGWPHU",
+    credentialId: "PWRUYQRGWPHU",
+  },
+  {
+    title: "Unsupervised Learning, Recommenders, Reinforcement Learning",
+    logo: "/deep_learning.png",
+    company: "DeepLearning.AI",
+    date: "Issued by February 2025",
+    links:
+      "https://www.coursera.org/account/accomplishments/records/6ENSVG2IXPNL",
+    credentialId: "6ENSVG2IXPNL",
+  },
+  {
+    title: "TOEIC",
+    logo: "/toeic.jpg",
+    company: "CENTER FOR PROFESSIONAL ASSESSMENT (THAILAND)",
+    date: "Issued by January 2025",
+    links:
+      "https://drive.google.com/file/d/1NdMa00BcaLXr_Z0cqKhy4ICAxvs7rYrE/view?usp=sharing",
+    credentialId: "",
+  },
+  {
+    title: "MSc Consulting Project",
+    logo: "/bath.jpeg",
+    company: "University of Bath",
+    date: "Issued by March 2024",
+    links:
+      "https://drive.google.com/file/d/1O66TPo6SKUt_5rrHZMLj77asP3f3mliw/view?usp=sharing",
+    credentialId: "",
+  },
+  {
+    title: "The Big Team Challenge 2023",
+    logo: "/bath.jpeg",
+    company: "University of Bath",
+    date: "Issued by October 2023",
+    links:
+      "https://drive.google.com/file/d/10g9HXNjl5GhYvqbVNGJj-u7wcjrRA1pN/view?usp=sharing",
+    credentialId: "",
+  },
   {
     title: "Clean Code",
     logo: "/udemy.png",
@@ -120,15 +204,6 @@ export const certificateItemsOne = [
     links:
       "https://www.udemy.com/certificate/UC-4f1a2a84-2381-4546-a59e-a0bd23edb9f6/",
     credentialId: "UC-4f1a2a84-2381-4546-a59e-a0bd23edb9f6",
-  },
-  {
-    title: "English Pronunciation Masterclass",
-    logo: "/udemy.png",
-    company: "Udemy",
-    date: "Issued by April 2023",
-    links:
-      "https://www.udemy.com/certificate/UC-cc99a44b-f85e-4485-93b6-b6f8e46d0a20/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email",
-    credentialId: "UC-cc99a44b-f85e-4485-93b6-b6f8e46d0a20",
   },
   {
     title: "Excel Macros & Excel VBA Programming for Beginners",
@@ -140,22 +215,13 @@ export const certificateItemsOne = [
     credentialId: "UC-a6a4bdc0-81fa-44b9-894b-34b322109632",
   },
   {
-    title: "Introduction to Front-End Development",
-    logo: "/coursera.png",
-    company: "Coursera",
-    date: "Issued by July 2022",
+    title: "How to make a good presentation design",
+    logo: "/futureskill.jpeg",
+    company: "FutureSkill",
+    date: "Issued by January 2023",
     links:
-      "https://www.coursera.org/account/accomplishments/certificate/2ZRAWEXRYP76",
-    credentialId: "2ZRAWEXRYP76",
-  },
-  {
-    title: "Programming with Javascript",
-    logo: "/coursera.png",
-    company: "Coursera",
-    date: "Issued by July 2022",
-    links:
-      "https://www.coursera.org/account/accomplishments/certificate/MLKNT3K4T6NB",
-    credentialId: "MLKNT3K4T6NB",
+      "https://drive.google.com/file/d/1L2Ydtb1N4HOUBHWBi7RC0rqTEeHACDbh/view?usp=sharing",
+    credentialId: "",
   },
   {
     title: "Version Control",
@@ -167,84 +233,12 @@ export const certificateItemsOne = [
     credentialId: "",
   },
   {
-    title:
-      "Analyze business data for supporting customer requirements by Business Analytics",
-    logo: "/futureskill.jpeg",
-    company: "FutureSkill",
-    date: "Issued by January 2023",
-    links:
-      "https://drive.google.com/file/d/12_Amb_nVKtvLU7ibsEzbhcUx3D3CZOKe/view?usp=sharing",
-    credentialId: "",
-  },
-  {
-    title: "Effectively Management database by SQL Commands",
-    logo: "/futureskill.jpeg",
-    company: "FutureSkill",
-    date: "Issued by July 2022",
-    links:
-      "https://drive.google.com/file/d/1craA9WJ-0H5HfkiR-_sjldqCykGDQGLh/view?usp=sharing",
-    credentialId: "",
-  },
-  {
-    title: "How to make a good presentation design",
-    logo: "/futureskill.jpeg",
-    company: "FutureSkill",
-    date: "Issued by January 2023",
-    links:
-      "https://drive.google.com/file/d/1L2Ydtb1N4HOUBHWBi7RC0rqTEeHACDbh/view?usp=sharing",
-    credentialId: "",
-  },
-  {
-    title: "Introduction to Developing Software in Microservices System",
-    logo: "/futureskill.jpeg",
-    company: "FutureSkill",
-    date: "Issued by September 2022",
-    links:
-      "https://drive.google.com/file/d/127vv0O-ix39mELLpyolyYuwz0ZdpXHe2/view?usp=sharing",
-    credentialId: "#00024181",
-  },
-  {
-    title: "The Complete Guide to Kubernetes",
-    logo: "/futureskill.jpeg",
-    company: "FutureSkill",
-    date: "Issued by July 2022",
-    links:
-      "https://drive.google.com/file/d/1TxoqQix5sTSC_QAygqGhoGh2dot75ybY/view?usp=sharing",
-    credentialId: "#00023513",
-  },
-  {
     title: "Purpose-built-Database",
     logo: "/skooldio.jpeg",
     company: "Skooldio",
     date: "Issued by July 2022",
     links:
       "https://www.skooldio.com/certificate/1711bdb7-6318-4bf1-ab84-48ec61eb8ff6",
-    credentialId: "",
-  },
-  {
-    title: "How to become a better programmer",
-    logo: "/skooldio.jpeg",
-    company: "Skooldio",
-    date: "Issued by July 2022",
-    links:
-      "https://www.skooldio.com/certificate/734363fe-54b1-440e-83b9-ee6b2ad4423d",
-    credentialId: "",
-  },
-  {
-    title: "CMU-eGrad",
-    logo: "/cmu.png",
-    company: "Chiang Mai University",
-    date: "Issued by November 2020",
-    links:
-      "https://drive.google.com/file/d/1KVJsbcT_W5Ih54SawpaBdcb2XhKrcNTf/view?usp=sharing",
-    credentialId: "",
-  },
-  {
-    title: "EF SET English Score Test (B1 Level)",
-    logo: "/efset.jpeg",
-    company: "EF Standard English Test (EF SET) ",
-    date: "Issued by February 2022",
-    links: "https://www.efset.org/cert/W2fwF6",
     credentialId: "",
   },
 ];
