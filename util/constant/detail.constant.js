@@ -13,6 +13,10 @@ export const quickLinks = [
     href: "https://www.linkedin.com/in/suphakorn-homnan-26053b210",
   },
   { text: "Email", href: "mailto:supakornhomnan@gmail.com" },
+  {
+    text: "CV",
+    href: "https://drive.google.com/file/d/1Q0yBNwKpTpVkF5nog2cZ5RxmcmAGusk4/view?usp=sharing",
+  },
 ];
 
 export const description = `
@@ -122,8 +126,7 @@ export const projectsInfo = [
     link: "https://drive.google.com/file/d/17El9vNVcJ_GgbW7yk6jMOqrWsisupX4U/view",
   },
   {
-    title:
-      "M3 Competition Forecasting Model",
+    title: "M3 Competition Forecasting Model",
     logo: "/bath.jpeg",
     company: "University of Bath",
     startDate: "2023-12",
