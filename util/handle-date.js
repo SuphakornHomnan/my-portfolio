@@ -106,7 +106,7 @@ export function durationDisplay(start, end) {
   );
 
   return `${pluralize(durationYears, "yr")} ${pluralize(
-    durationMonths + 1,
+    durationMonths,
     "mo"
   )}`;
 }
